@@ -5,6 +5,29 @@
   <title>App</title>
 </head>
 <body>
+  <!-- Encabezado -->
+  <h2>User interaction</h2>
+  <!-- Etiqueta del elemento de entrada -->
+  <label>Precio sin IVA</label>
+  <!-- Elemento de entrada -->
+  <input type="text" id="price">
+  <!-- Botón -->
+  <!-- Ojo en el atributo 'onclick' -->
+  <input type="button" value="Calcular" onclick="calculate()">
+  <div id="final_price"></div>
+  <br>
+  <hr>
+  <h2>Comparación de números</h2>
+  <label>Número A</label>
+  <input type="text" id="number_a">
+  <br>
+  <label>Número B</label>
+  <input type="text" id="number_b">
+  <br>
+  <input type="button" value="Comparar números" onclick="comparar()">
+  <br>
+  <div id="compare_result"></div>
+  <hr>
   <script src="js/app.js"></script>
 </body>
 </html>

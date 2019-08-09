@@ -29,7 +29,7 @@ console.log("El valor de i_am_bool es: ", i_am_bool);
 // Funciones
 /**
  * Nota:
- *  - Las funciones se definene con la palabra "function"
+ *  - Las funciones se definen con la palabra "function"
  *  - La firma de la función no necesita tener el tipo de dato que se regresa
  *  - Los parámetros tampoco manejan el tipo de dato
  *  - Se pueden usar variables sin declararlas usando let.
@@ -41,3 +41,18 @@ function get_total_price(price_without_taxes) {
 price_without_taxes = 10;
 total = get_total_price(price_without_taxes);
 console.log("El precio final es de: ", total)
+
+/**
+ * Función que se ejecuta cuando se presiona el botón "Calcular"
+ */
+function calculate() {
+  // Busca en el documento el elemento con el id="price" y obtiene el 
+  // valor de ese elemento
+  let price = document.getElementById('price').value;
+  // Manda a llamar la función get_total_price pasando la variable price.
+  // El resultado lo almacena en la variable total_price
+  let total_price = get_total_price(price);
+  // Selecciona en el documento el elemento con el id="final_price"
+  // En su contenido HTML muestra el valor de la variable "price"
+  document.getElementById('final_price').innerHTML = total_price;
+}
